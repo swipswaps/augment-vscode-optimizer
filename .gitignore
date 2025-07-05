@@ -1,0 +1,59 @@
+# Augment VSCode Optimizer - Git Ignore File
+
+# Backup directories (user-specific)
+.augment-optimizer-backups/
+.last_augment_backup
+
+# Benchmark results
+augment_benchmark_*.json
+performance_results_*.json
+
+# Logs and temporary files
+*.log
+*.tmp
+/tmp/
+augment_optimizations_*
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Test artifacts
+test_*.log
+debug.log
+benchmark_*.log
+
+# Temporary scripts
+temp_*.sh
+test_temp_*
+
+# User settings backups
+settings.json.bak
+*.backup
+
+# Performance monitoring data
+performance_data/
+monitoring_results/
+
+# Local development
+local_test/
+dev_test/
+sandbox/

@@ -1,0 +1,91 @@
+{
+    "_comment": "Augment VSCode Optimizer - Optimized Configuration",
+    "_description": "Research-based optimizations for Augment extension performance",
+    "_version": "1.0.0",
+    "_optimizations": [
+        "Token refresh optimization (9s → 1h)",
+        "Network timeout fixes (30s → 60s)",
+        "Keyring access elimination",
+        "Resource contention prevention",
+        "Memory usage optimization",
+        "UI responsiveness improvements"
+    ],
+    
+    "augment.auth.tokenRefreshInterval": 3600000,
+    "_tokenRefreshInterval_comment": "Refresh every hour instead of 9 seconds (99.75% reduction)",
+    
+    "augment.auth.preemptiveRefresh": false,
+    "_preemptiveRefresh_comment": "Disable preemptive refresh to reduce keyring access",
+    
+    "augment.auth.retryOnFailure": false,
+    "_retryOnFailure_comment": "Disable auth retry storms that cause cascading failures",
+    
+    "augment.network.timeout": 60000,
+    "_networkTimeout_comment": "Increase timeout from 30s to 60s for AI processing latency",
+    
+    "augment.network.retryAttempts": 2,
+    "_retryAttempts_comment": "Reduce retries from 3 to 2 to prevent retry storms",
+    
+    "augment.network.retryDelay": 5000,
+    "_retryDelay_comment": "5 second delay between retries to prevent server overload",
+    
+    "augment.network.keepAlive": true,
+    "_keepAlive_comment": "Enable connection reuse to reduce connection overhead",
+    
+    "augment.cache.enabled": true,
+    "_cacheEnabled_comment": "Enable caching to reduce redundant API calls",
+    
+    "augment.cache.maxSize": "100MB",
+    "_cacheMaxSize_comment": "Reasonable cache size for performance without excessive memory usage",
+    
+    "augment.cache.ttl": 3600000,
+    "_cacheTtl_comment": "1 hour cache TTL to balance freshness and performance",
+    
+    "augment.cache.compression": true,
+    "_cacheCompression_comment": "Enable compression to maximize cache efficiency",
+    
+    "augment.performance.maxConcurrentRequests": 3,
+    "_maxConcurrentRequests_comment": "Limit concurrent requests to prevent resource contention",
+    
+    "augment.performance.requestThrottling": true,
+    "_requestThrottling_comment": "Enable throttling to prevent API rate limit issues",
+    
+    "augment.performance.backgroundProcessing": false,
+    "_backgroundProcessing_comment": "Disable background processing to reduce resource usage",
+    
+    "augment.logging.level": "warn",
+    "_loggingLevel_comment": "Reduce logging verbosity to decrease I/O overhead",
+    
+    "augment.logging.maxFileSize": "10MB",
+    "_loggingMaxFileSize_comment": "Limit log file size to prevent disk space issues",
+    
+    "augment.logging.enableDebug": false,
+    "_loggingEnableDebug_comment": "Disable debug logging for production use",
+    
+    "augment.ui.animationsEnabled": false,
+    "_uiAnimationsEnabled_comment": "Disable animations to reduce CPU usage and improve responsiveness",
+    
+    "augment.ui.preloadContent": false,
+    "_uiPreloadContent_comment": "Disable preloading to reduce memory usage",
+    
+    "augment.ui.lazyLoading": true,
+    "_uiLazyLoading_comment": "Enable lazy loading to improve startup performance",
+    
+    "augment.memory.garbageCollection": "aggressive",
+    "_memoryGarbageCollection_comment": "Aggressive GC to prevent memory leaks",
+    
+    "augment.memory.maxHeapSize": "512MB",
+    "_memoryMaxHeapSize_comment": "Reasonable heap limit to prevent excessive memory usage",
+    
+    "augment.telemetry.enabled": false,
+    "_telemetryEnabled_comment": "Disable telemetry for privacy and performance",
+    
+    "augment.analytics.enabled": false,
+    "_analyticsEnabled_comment": "Disable analytics to reduce network traffic",
+    
+    "augment.updates.autoCheck": false,
+    "_updatesAutoCheck_comment": "Disable automatic update checks to reduce background activity",
+    
+    "augment.experimental.features": false,
+    "_experimentalFeatures_comment": "Disable experimental features for stability"
+}
